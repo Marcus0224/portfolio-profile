@@ -13,8 +13,16 @@ function App() {
 
   return (
     <div>
-      <Contact/>
-      <Footer/>
+      <Nav 
+        categories={categories}
+        currentCategory={currentCategory}
+        setCurrentCategory={setCurrentCategory}
+      />
+      {currentCategory === 'About me' && <About />}
+      {currentCategory === 'Project' && <Project />}
+      {currentCategory === 'Contact' && <Contact />}
+      {currentCategory === 'Resume' && <Resume />}
+      <Footer />
     </div>
   );
 }

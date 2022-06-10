@@ -1,44 +1,40 @@
-import React, { useEffect } from "react";
-import { capitalizeFirstLetter } from "../../utils/helpers";
+import React, { useState, useEffect } from 'react';
 
-function Nav(props) {
+function Nav (props) {
     const {
-        pages = [],
-        setCurrentPage,
-        currentPage,
+        categories = [],
+        currentCategory,
+        setCurrentCategory
     } = props;
+    // set current state of the hamburger nav bar, default is true
+    const [navbarShowing, setNavbarShowing] = useState(true);
 
     useEffect(() => {
-        document.title = capitalizeFirstLetter(currentPage.name);
-    }, [currentPage]);
+        document.title = `${currentCategory} - Matt Pityo Portfolio`;
+    }, [currentCategory]);
 
     return (
-        <nav className="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-            <div className="container">
-                <a className="navbar-brand js-scroll-trigger">Marc St louis </a>
-                <button className="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon"></span>
+        <header className="d-flex navbar justify-content-start m-2 mx-3">
+                <button className='hamburger' onClick={() => setNavbarShowing(!navbarShowing)}>
+                    <div></div><div></div><div></div>
                 </button>
-                <div className="collapse navbar-collapse" id="navbarResponsive">
-                    <ul className="navbar-nav ml-auto">
-                        {pages.map((Page) => (
-                            <li
-                                className={`nav-item nav-link js-scroll-trigger ${
-                                    currentPage.name === Page.name && 'active'
-                                    }`}
-                                key={Page.name}
-                            >
-                                <span
-                                    onClick={() => setCurrentPage(Page)}
-                                >
-                                    {capitalizeFirstLetter(Page.name)}
+                {navbarShowing ? (
+                    <div>
+                        <ul className='navbar-nav flex-row'>
+                        {categories.map((category) => (
+                            <li className={`mx-2 nav-item ${
+                                currentCategory === category && 'active'}`} key={category}>
+                                <span onClick={() => {
+                                    setCurrentCategory(category);
+                                    }}>
+                                    {category}
                                 </span>
                             </li>
                         ))}
-                    </ul>
-                </div>
-            </div>
-        </nav>
+                        </ul>
+                    </div>
+                ) : (<></>)}
+        </header>
     );
 }
 
