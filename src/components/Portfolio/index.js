@@ -29,9 +29,10 @@ function Portfolio() {
             repo:'https://github.com/Marcus0224/SafeSpot'
         },
         {
-            name: 'Employee-Tracker',
-            description: 'Node, inquirer, dotenv, MySQL2',
-            repo: 'https://github.com/Marcus0224/Employee-Tracker'
+            name: 'Food-Festival',
+            description: 'Node, service-worker, PWA, MySQL2, HTML',
+            link: 'https://marcus0224.github.io/food-festival/',
+            repo: 'https://github.com/Marcus0224/food-festival'
         },
         {
             name: 'WeatherMan',
