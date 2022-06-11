@@ -1,78 +1,70 @@
 import React, { useState } from "react";
 import Project from '../Project';
-import { capitalizeFirstLetter } from "../../utils/helpers";
 
 function Portfolio() {
-    const [pages] = useState([
-        {
-            name:'portfolio'
-        }
-    ]);
-    const [currentPage] = useState(pages);
-    const [projects] = useState([
+    
+    const [projects, setProjects] = useState([
         {
             name: 'budget-tracker',
             description: 'indexDB, Node, Express, Mongoose',
             link: 'https://boiling-retreat-42311.herokuapp.com/',
-            repo: 'https://github.com/Marcus0224/budget-tracker'
+            repo: 'https://github.com/Marcus0224/budget-tracker',
+            image: 'tracker.png'
         },
         {
             name:'Devhub',
             description:'React, NoSQL databases, Chakra UI, GraphQL APIs',
             link:'https://whispering-island-67364.herokuapp.com/cart',
-            repo:'https://github.com/Marcus0224/DevHub'
+            repo:'https://github.com/Marcus0224/DevHub',
+            image: 'Devhub.png'
         },
         {
             name:'Safespot',
             description:'Express,handlebars, Bcrypt, MySQL2',
             link:'https://safespotblog.herokuapp.com/login',
-            repo:'https://github.com/Marcus0224/SafeSpot'
+            repo:'https://github.com/Marcus0224/SafeSpot',
+            image:'safespot.png'
         },
         {
             name: 'Food-Festival',
             description: 'Node, service-worker, PWA, MySQL2, HTML',
             link: 'https://marcus0224.github.io/food-festival/',
-            repo: 'https://github.com/Marcus0224/food-festival'
+            repo: 'https://github.com/Marcus0224/food-festival',
+            image:'burgers.jpg'
         },
         {
             name: 'WeatherMan',
             description: 'HTML, API, Javascript',
             link:'https://marcus0224.github.io/WeatherMan/',
-            repo: 'https://github.com/Marcus0224/WeatherMan',   
+            repo: 'https://github.com/Marcus0224/WeatherMan',
+            image:'weatherman.png'   
         },
         {
             name:'Zookeeper',
             description:'Node, routes, css, HTML,Javascript',
             link:'https://marcus0224.github.io/Zookeeper/',
-            repo:'https://github.com/Marcus0224/Zookeeper'
+            repo:'https://github.com/Marcus0224/Zookeeper',
+            image:'header-bg.jpg'
         },
         {
             name:'tech-blog',
             description:'MySQL,Sequelize,express,bcrypt',
             link:'https://floating-beach-88217.herokuapp.com/',
-            repo:'https://github.com/Marcus0224/tech-blog'
+            repo:'https://github.com/Marcus0224/tech-blog',
+            image:'techblog.png'
         },
 
     ]);
 
     return (
-        <section className="p-0">
-            <div className="container-fluid p-0">
-                <h1 className="text-center margin-top">{capitalizeFirstLetter(currentPage.name)}</h1>
-                <hr className="my-4" />
-                <div className="row no-gutters popup-gallery">
-                   
-                        {projects.map((project, idx) => (
-                            <Project
-                                project={project}
-                                key={"project" + idx}
-                            />
-                        ))}
-                    </div>
-                
-            </div>
-        </section>
-    );
-};
-
-export default Portfolio;
+        <div className="flex flex-wrap justify-center">
+          {projects.map((project) => (
+            <Project project={project} key={project.name} />
+          ))}
+        </div>
+      );
+    }
+    
+    export default Portfolio;
+  
+   

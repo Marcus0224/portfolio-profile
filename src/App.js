@@ -6,6 +6,7 @@ import Contact from './components/Contact';
 import Project from './components/Project';
 import Resume from './components/Resume';
 import Footer from './components/Footer';
+import Portfolio from './components/Portfolio';
 
 function App() {
   const categories = ['About me', 'Project', 'Contact', 'Resume'];
@@ -22,6 +23,7 @@ function App() {
       {currentCategory === 'Project' && <Project />}
       {currentCategory === 'Contact' && <Contact />}
       {currentCategory === 'Resume' && <Resume />}
+      {currentCategory === 'Portfolio' && <Portfolio />}
       <Footer />
     </div>
   );
