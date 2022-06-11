@@ -10,7 +10,7 @@ function Nav (props) {
     const [navbarShowing, setNavbarShowing] = useState(true);
 
     useEffect(() => {
-        document.title = `${currentCategory} - Matt Pityo Portfolio`;
+        document.title = `${currentCategory} - Marc St louis portfolio`;
     }, [currentCategory]);
 
     return (
