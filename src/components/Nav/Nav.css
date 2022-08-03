@@ -1,0 +1,36 @@
+/* NAV */
+header {
+    width: fit-content;
+    border-radius: 25px;
+  }
+  .hamburger {
+    border-radius: 50%;
+    height: 3rem;
+    width: 3rem;
+    padding-top: 10px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--link-color);
+    border: 0;
+  }
+  .hamburger:hover {
+    background-color: rgba(25, 132, 159, 0.511);
+  }
+  .hamburger > * {
+    height: 10px;
+    width: 24px;
+    border-top: 2px solid rgb(255, 255, 255);
+    margin: auto;
+  }
+  .nav-item {
+    cursor: pointer;
+    color: rgb(168, 168, 168);
+  }
+  .nav-item:hover {
+    color: rgba(25, 132, 159, 0.511);
+  }
+  .active {
+    color: var(--link-color)!important;
+  }
+  /* END NAV */

@@ -1,0 +1,17 @@
+/* CONTACT */
+#contact-form > * {
+    margin-top: .25rem;
+  }
+  form {
+    max-width: 75vh;
+    margin: auto;
+  }
+  .btn {
+    background-color: var(--tertiary-color);
+    border-color: var(--link-color);
+  }
+  .btn:hover {
+    background-color: #589210;
+    border-color: #10a237;
+  }
+  /* END CONTACT */

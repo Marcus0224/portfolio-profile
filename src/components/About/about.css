@@ -1,0 +1,24 @@
+/* ABOUT */
+.about {
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+  }
+  .about-container {
+    align-items: center;
+    max-width: 120vh;
+    max-height: 90vh;
+    margin: auto;
+  }
+  .bio {
+    border-radius: 1rem;
+  }
+  .bio-img {
+    max-height: 500px;
+    max-width: 500px;
+  }
+  .bio-img-container {
+    margin: auto;
+    border-radius: 75%;
+  }
+  /* END ABOUT */
