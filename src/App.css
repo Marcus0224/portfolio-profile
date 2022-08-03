@@ -1,46 +1,20 @@
-:root {
-  --primary-color: #37322F;
-  --secondary-color: #5a0844;
-  --tertiary-color: #bacb1e;
-  --link-color: #20199f;
-}
+import React from 'react';
 
-a {
-  color: var(--link-color);
-  text-decoration: none;
-}
-.close {
-  border-radius: 10px;
-  background-color: rgb(208, 126, 126);
-  margin-right: 10px;
-  padding: 3px;
-  cursor: pointer;
-}
 
-body {
-  background-color: rgb(187, 125, 81);
-}
+const App = () => {
+  return (
+    <>
+      <Header />
+      <Nav />
+      <About />
+      <Experience />
+      {/* <Services /> */}
+      <Portfolio />
+      <Testimonials />
+      <Contact />
+      <Footer />
+    </>
+  );
+};
 
-section {
-  overflow: auto;
-  max-height: 85vh;
-}
-
-.text-align {
-  text-align: center;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
+export default App;

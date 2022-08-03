@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import Project from '../Project';
+import './portfolio.css';
+
 
 function Portfolio() {
     
