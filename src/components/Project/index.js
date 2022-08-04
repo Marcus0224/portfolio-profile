@@ -1,25 +1,71 @@
-import React from "react";
+import React, { useState } from "react";
+import './project.css';
+// import { FaGithubAlt } from "react-icons/fa";
+// import { ImRocket } from "react-icons/im";
 
-function Project(props) {
-  const { name, link, repo, image } = props.project;
+function SingleProject(props) {
+  const { name, description, link, github, image, featured } = props.project;
+  const [expanded, setExpanded] = useState(false);
+
+  const handleClick = (event) => {
+      props.filterProjects(event);
+  }
+
   return (
-    <a href={link} key={name} target="_blank" rel="noreferrer">
-      <div
-        className="w-96 h-64 m-2 shadow-md shadow-black rounded-md relative"
-        style={{
-          backgroundRepeat: "no-repeat",
-          backgroundPosition: "center",
-          backgroundSize: "cover",
-          // backgroundColor: "gray",
-          // backgroundBlendMode: "multiply",
-        }}>
-        <span className="absolute -bottom-1/3 right-3">
-          <a href={repo} target="_blank" rel="noreferrer">
-          </a>
-        </span>
-      </div>
-    </a>
+    <div>
+        {/* image */}
+        <div className="flex-row flex-wrap prj-img-container col-sm-4 col-md-12" onClick={() => setExpanded(!expanded)}>
+          <img
+            className={`prj-img img-fluid ${featured && 'featured-prj'}`}
+            src={`./assets/project/${image}`}
+            alt=""
+          />
+        </div>
+        {expanded && (
+            <div>
+        {/* card body */}
+        <div className="prj-body flex-row flex-wrap col-sm-8 m-auto w-100">
+          {/* title and if featured project */}
+          <h4 className="card-title mb-0">{name}</h4>
+          {featured && <h6 className="featured mt-1">Featured</h6>}
+
+          {/* tools used */}
+          <div className="mb-2 tool-wrapper">
+            {description.map((tool) => (
+              <span
+                className="card-subtitle text-muted badge tool"
+                onClick={handleClick}
+              >
+                {tool}
+              </span>
+            ))}
+          </div>
+          {/* description */}
+          <p className="card-text">{description}</p>
+          {/* footer */}
+          <div className="prj-footer d-flex justify-content-around">
+            <a
+              href={`https://github.com/marcus0224/${github}`}
+              className="card-link flex-row"
+              target="_blank"
+              rel="noreferrer"
+            >
+             
+            </a>
+            <a
+              href={link}
+              className="card-link flex-row"
+              target="_blank"
+              rel="noreferrer"
+            >
+             
+            </a>
+          </div>
+        </div>
+        </div>
+        )}
+    </div>
   );
 }
 
-export default Project;
+export default SingleProject;
