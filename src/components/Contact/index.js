@@ -1,67 +1,48 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './contact.css';
+import {MdMarkEmailUnread} from 'react-icons/md'
+import {BsFillPhoneFill} from 'react-icons/bs'
+import  { useRef } from 'react';
+import emailjs from 'emailjs-com'
 
-import { validateEmail } from '../../utils/helpers';
-
-function ContactForm() {
-  const [formState, setFormState] = useState({ name: '', email: '', message: '' });
-
-  const [errorMessage, setErrorMessage] = useState('');
-  const { name, email, message } = formState;
-
-  const handleSubmit = (e) => {
+const Contact = () => {
+  const form = useRef();
+  const sendEmail = (e) => {
     e.preventDefault();
-    if (!errorMessage) {
-      console.log('Submit Form', formState);
-    }
-  };
 
-  const handleChange = (e) => {
-    if (e.target.name === 'email') {
-      const isValid = validateEmail(e.target.value);
-      if (!isValid) {
-        setErrorMessage('Your email is invalid.');
-      } else {
-        setErrorMessage('');
-      }
-    } else {
-      if (!e.target.value.length) {
-        setErrorMessage(`${e.target.name} is required.`);
-      } else {
-        setErrorMessage('');
-      }
-    }
-    if (!errorMessage) {
-      setFormState({ ...formState, [e.target.name]: e.target.value });
-      console.log('Handle Form', formState);
-    }
+    emailjs.sendForm('service_u4ysdlg', 'template_53trssu', form.current, 'Au-uJPFaKTo-Sj9Tq')
+      e.target.reset()
   };
 
   return (
-    <section>
-      <h1 data-testid="h1tag">Contact me</h1>
-      <form id="contact-form" onSubmit={handleSubmit}>
-        <div>
-          <label htmlFor="name">Name:</label>
-          <input type="text" name="name" defaultValue={name} onBlur={handleChange} />
+    <section id='contact'>
+      <h5>Get In Touch</h5>
+      <h2>Contact Me</h2>
+
+      <div className="container contact_container">
+        <div className="contact_options">
+          <article className="contact_option">
+            <MdMarkEmailUnread className='contact_option-icon'/>
+            <h4>Email</h4>
+            <h5>marcstlouis04@gmail.com</h5>
+            <a href='mailto:marcstlouis04@gmail.com'>Send A Email</a>
+          </article>
+          <article className="contact_option">
+            <BsFillPhoneFill className='contact_option-icon'/>
+            <h4>Phone</h4>
+            <h5>(954)-376-9933</h5>
+            <a href='sms:954-376-9933'>Send A Text</a>
+          </article>
         </div>
-        <div>
-          <label htmlFor="email">Email address:</label>
-          <input type="email" name="email" defaultValue={email} onBlur={handleChange} />
-        </div>
-        <div>
-          <label htmlFor="message">Message:</label>
-          <textarea name="message" rows="5" defaultValue={message} onBlur={handleChange} />
-        </div>
-        {errorMessage && (
-          <div>
-            <p className="error-text">{errorMessage}</p>
-          </div>
-        )}
-        <button data-testid="button" type="submit">Submit</button>
-      </form>
+        <form ref={form} onSubmit={sendEmail}>
+          <input type='text' name='name' placeholder='Your Full Name' required />
+          <input type='email' name='email' placeholder='Your Email' required />
+          <textarea name="message" rows="7" placeholder='Your Message' required></textarea>
+          <button type='submit' className='btn btn-primary'>Send Message</button>
+        </form>
+      </div>
     </section>
-  );
+  )
 }
 
-export default ContactForm;
+export default Contact

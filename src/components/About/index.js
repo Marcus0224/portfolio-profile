@@ -9,7 +9,7 @@ import {VscFolder} from 'react-icons/vsc'
 const About = () => {
   return (
     <section id='about'>
-      <h5>Get to Know</h5>
+      
       <h2>About Me</h2>
       
       <div className="container about_container">
@@ -30,7 +30,7 @@ const About = () => {
             <article className='about_card'>
               <FiUsers className='about_icon'/>
               <h5>
-                Clients
+                Collaborations
               </h5>
               <small>TBD</small>
             </article>

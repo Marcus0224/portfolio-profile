@@ -4,7 +4,7 @@ import Nav from './components/Nav';
 import About from './components/About';
 import Contact from './components/Contact';
 import Project from './components/Project';
-import Resume from './components/Resume';
+import Experience from './components/Experience';
 import Footer from './components/Footer';
 import Portfolio from './components/Portfolio';
 
@@ -22,7 +22,7 @@ function App() {
       {currentCategory === 'About me' && <About />}
       {currentCategory === 'Project' && <Project />}
       {currentCategory === 'Contact' && <Contact />}
-      {currentCategory === 'Resume' && <Resume />}
+      {currentCategory === 'Experience' && <Experience />}
       {currentCategory === 'Portfolio' && <Portfolio />}
       <Footer />
     </div>

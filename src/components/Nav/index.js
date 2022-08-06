@@ -1,42 +1,24 @@
 import React, { useState, useEffect } from 'react';
 import './Nav.css';
+import {AiOutlineHome} from 'react-icons/ai'
+import {AiOutlineUser} from 'react-icons/ai'
+import {BsBook} from 'react-icons/bs'
+import {TiFolderOpen} from 'react-icons/ti'
+import {TbMessageCircle} from 'react-icons/tb'
+import {GiFootprint} from 'react-icons/gi'
 
-function Nav (props) {
-    const {
-        categories = [],
-        currentCategory,
-        setCurrentCategory
-    } = props;
-    // set current state of the hamburger nav bar, default is true
-    const [navbarShowing, setNavbarShowing] = useState(true);
-
-    useEffect(() => {
-        document.title = `${currentCategory} - Marc St louis portfolio`;
-    }, [currentCategory]);
-
-    return (
-        <header className="d-flex navbar justify-content-start m-2 mx-3">
-                <button className='hamburger' onClick={() => setNavbarShowing(!navbarShowing)}>
-                    <div></div><div></div><div></div>
-                </button>
-                {navbarShowing ? (
-                    <div>
-                        <ul className='navbar-nav flex-row'>
-                        {categories.map((category) => (
-                            <li className={`mx-2 nav-item ${
-                                currentCategory === category && 'active'}`} key={category}>
-                                <span onClick={() => {
-                                    setCurrentCategory(category);
-                                    }}>
-                                    {category}
-                                </span>
-                            </li>
-                        ))}
-                        </ul>
-                    </div>
-                ) : (<></>)}
-        </header>
-    );
+const Nav = () => {
+  const [activeNav, setActiveNav] = useState('#');
+  return (
+    <nav>
+      <a href='#' onClick={() => setActiveNav('#')} className={activeNav === '#' ? 'active' : ''}><AiOutlineHome/></a>
+      <a href='#about' onClick={() => setActiveNav('#about')} className={activeNav === '#about' ? 'active' : ''}><AiOutlineUser/></a>
+      <a href='#experience' onClick={() => setActiveNav('#experience')} className={activeNav === '#experience' ? 'active' : ''}><BsBook/></a>
+      <a href='#portfolio' onClick={() => setActiveNav('#portfolio')} className={activeNav === '#portfolio' ? 'active' : ''}><TiFolderOpen/></a>
+      <a href='#contact' onClick={() => setActiveNav('#contact')} className={activeNav === '#contact' ? 'active' : ''}><TbMessageCircle/></a>
+      <a href='#footer' onClick={() => setActiveNav('#footer')} className={activeNav === '#footer' ? 'active' : ''}><GiFootprint/></a>
+    </nav>
+  )
 }
 
-export default Nav;
+export default Nav
