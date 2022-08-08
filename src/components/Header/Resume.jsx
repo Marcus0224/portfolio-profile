@@ -1,5 +1,5 @@
 import React from 'react'
-//import CV from '../../assets/odneybleusRESUME.pdf'
+import CV from '../../assets/resume/Resume1.png'
 
 const Resume = () => {
   return (
@@ -12,4 +12,4 @@ const Resume = () => {
   )
 }
 
-export default CTA
+export default Resume
