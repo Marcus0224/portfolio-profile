@@ -6,6 +6,7 @@ import Safespot from '../../assets/project/safespot.png'
 import Food from '../../assets/project/burgers.jpg'
 import weatherman from '../../assets/project/weatherman.png'
 import Zookeeper from '../../assets/project/header-bg.jpg'
+import tech from '../../assets/project/techblog.png'
 import Aos from "aos";
 import "aos/dist/aos.css";
 
@@ -15,49 +16,49 @@ const data = [
         description: 'indexDB, Node, Express, Mongoose',
         link: 'https://boiling-retreat-42311.herokuapp.com/',
         github: 'https://github.com/Marcus0224/budget-tracker',
-        image: 'tracker.png'
+        image: tracker
       },
       {
-        name:'Devhub',
+        name: 'Devhub',
         description:'React, NoSQL databases, Chakra UI, GraphQL APIs',
         link:'https://whispering-island-67364.herokuapp.com/cart',
         github:'https://github.com/Marcus0224/DevHub',
-        image: 'Devhub.png'
+        image: Devhub
       },
       {
         name:'Safespot',
         description:'Express,handlebars, Bcrypt, MySQL2',
         link:'https://safespotblog.herokuapp.com/login',
         github:'https://github.com/Marcus0224/SafeSpot',
-        image:'safespot.png'
+        image: Safespot
       },
       {
         name: 'Food-Festival',
         description: 'Node, service-worker, PWA, MySQL2, HTML',
         link: 'https://marcus0224.github.io/food-festival/',
         github: 'https://github.com/Marcus0224/food-festival',
-        image:'burgers.jpg'
+        image: Food
       },
       {
         name: 'WeatherMan',
         description: 'HTML, API, Javascript',
         link:'https://marcus0224.github.io/WeatherMan/',
         github: 'https://github.com/Marcus0224/WeatherMan',
-        image:'weatherman.png'   
+        image: weatherman   
       },
       {
         name:'Zookeeper',
         description:'Node, routes, css, HTML,Javascript',
         link:'https://marcus0224.github.io/Zookeeper/',
         github:'https://github.com/Marcus0224/Zookeeper',
-        image:'header-bg.jpg'
+        image: Zookeeper
       },
       {
         name:'tech-blog',
         description:'MySQL,Sequelize,express,bcrypt',
         link:'https://floating-beach-88217.herokuapp.com/',
         github:'https://github.com/Marcus0224/tech-blog',
-        image:'techblog.png'
+        image: tech
       },
 ];
 const Projects = () => {
