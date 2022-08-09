@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/portfoilo-profile/static/css/main.78ea7c89.css",
-    "main.js": "/portfoilo-profile/static/js/main.9be594d7.js",
+    "main.css": "/portfoilo-profile/static/css/main.a008962d.css",
+    "main.js": "/portfoilo-profile/static/js/main.8e4c323f.js",
     "static/js/787.6b7b27e6.chunk.js": "/portfoilo-profile/static/js/787.6b7b27e6.chunk.js",
     "static/media/Turk.jpeg": "/portfoilo-profile/static/media/Turk.21052f7fabcacb176996.jpeg",
     "static/media/header-bg.jpg": "/portfoilo-profile/static/media/header-bg.f94c03c83f15b4c3d390.jpg",
@@ -12,14 +12,15 @@
     "static/media/tracker.png": "/portfoilo-profile/static/media/tracker.59335f3b11ccf802b63b.png",
     "static/media/Resume1.png": "/portfoilo-profile/static/media/Resume1.cbdbea9f0f9c03cbd921.png",
     "static/media/background.jpg": "/portfoilo-profile/static/media/background.839a590681a7e825fea9.jpg",
+    "static/media/techblog.png": "/portfoilo-profile/static/media/techblog.df65afa44e558a3f9940.png",
     "static/media/cover-image.jpg": "/portfoilo-profile/static/media/cover-image.aa8f286bfd91888f8346.jpg",
     "index.html": "/portfoilo-profile/index.html",
-    "main.78ea7c89.css.map": "/portfoilo-profile/static/css/main.78ea7c89.css.map",
-    "main.9be594d7.js.map": "/portfoilo-profile/static/js/main.9be594d7.js.map",
+    "main.a008962d.css.map": "/portfoilo-profile/static/css/main.a008962d.css.map",
+    "main.8e4c323f.js.map": "/portfoilo-profile/static/js/main.8e4c323f.js.map",
     "787.6b7b27e6.chunk.js.map": "/portfoilo-profile/static/js/787.6b7b27e6.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.78ea7c89.css",
-    "static/js/main.9be594d7.js"
+    "static/css/main.a008962d.css",
+    "static/js/main.8e4c323f.js"
   ]
 }
