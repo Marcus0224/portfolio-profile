@@ -1,5 +1,5 @@
 import React from "react";
-import coverImage from '../../assets/cover/cover-image.jpg';
+import coverImage from '../../assets/cover/Turk.jpeg';
 import './about.css';
 import {BsAward} from 'react-icons/bs'
 import { FiUsers} from 'react-icons/fi'
