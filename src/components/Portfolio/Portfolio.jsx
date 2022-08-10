@@ -80,10 +80,10 @@ const Projects = () => {
               </div>
               <h3>{description}</h3>
               <div className="portfolio-item-cta">
-                <a href={github} id="git-btn" className="btn" target="_blank">
+                <a href={github} id="git-btn" className="btn" >
                   GitHub
                 </a>
-                <a href={link} className="btn btn-primary" target="_blank">
+                <a href={link} className="btn btn-primary" >
                   Live Demo
                 </a>
               </div>
