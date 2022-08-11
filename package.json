@@ -1,10 +1,9 @@
 {
-  "homepage": "http://marcus0224.github.io/portfoilo-profile",
   "name": "portfolio-profile",
   "version": "0.1.0",
+  "homepage": "https://marcus0224.github.io/portfoilo-profile",
   "private": true,
   "dependencies": {
-    "-": "^0.0.1",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^13.5.0",
